@@ -60,14 +60,15 @@ def failed(text):
 ori_binary_name = sys.argv[1]
 if args.strip:
   binary_name = ori_binary_name.split('.')[0]
-else:
-  binary_name = ori_binary_name
-  
   result=os.system('mv ./'+ori_binary_name+' ./'+binary_name)
   if result == 0:
     success('change name')
   else:
     failed('change name')
+else:
+  binary_name = ori_binary_name
+  
+
 
 
 # = sys.argv[2]
